@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TestApplication
 {
-    class Class1
+    class Foo
     {
     }
 }
