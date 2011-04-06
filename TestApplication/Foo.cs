@@ -7,5 +7,9 @@ namespace TestApplication
 {
     class Foo
     {
+        public string AnAdditionalMethod(string x)
+        {
+            return x.ToLower();
+        }
     }
 }
