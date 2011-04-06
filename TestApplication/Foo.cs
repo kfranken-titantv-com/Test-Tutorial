@@ -14,5 +14,13 @@ namespace TestApplication
             else
                 return String.Empty;
         }
+        
+        public void ANewMethod(string input)
+        {
+            string copy = input.ToLower();
+            copy = null;
+        }
+
     }
+
 }
