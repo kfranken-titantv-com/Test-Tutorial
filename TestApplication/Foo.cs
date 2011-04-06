@@ -23,24 +23,19 @@ namespace TestApplication
 
         public static long Fib(long n)
         {
-            if (n <= 1)
-                return n;
-            else
-            {
-                var t = new Dictionary<long, long>();
-                Func<long, long> fib = null;
-                fib = x =>
-                    {
-                        if (t.ContainsKey(x))
-                            return t[x];
-                        if (x <= 1)
-                            return x;
-                        long result = fib(x - 1L) + fib(x - 2L);
-                        t.Add(x, result);
-                        return result;
-                    };
-                return fib(n);
-            }
+            var t = new Dictionary<long, long>();
+            Func<long, long> fib = null;
+            fib = x =>
+                {
+                    if (t.ContainsKey(x))
+                        return t[x];
+                    if (x <= 1)
+                        return x;
+                    long result = fib(x - 1L) + fib(x - 2L);
+                    t.Add(x, result);
+                    return result;
+                };
+            return fib(n);
         }
 
     }
