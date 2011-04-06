@@ -21,14 +21,26 @@ namespace TestApplication
             copy = null;
         }
 
-        public static int Fib(int n)
+        public static long Fib(long n)
         {
-            if (n == 0)
-                return 0;
-            else if (n == 1)
-                return 1;
+            if (n <= 1)
+                return n;
             else
-                return Fib(n - 1) + Fib(n - 2);
+            {
+                var t = new Dictionary<long, long>();
+                Func<long, long> fib = null;
+                fib = x =>
+                    {
+                        if (t.ContainsKey(x))
+                            return t[x];
+                        if (x <= 1)
+                            return x;
+                        long result = fib(x - 1L) + fib(x - 2L);
+                        t.Add(x, result);
+                        return result;
+                    };
+                return fib(n);
+            }
         }
 
     }
