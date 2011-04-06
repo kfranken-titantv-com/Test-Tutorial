@@ -2,3 +2,6 @@
 *.exe
 *.exe.manifest
 *.suo
+*.pdb
+*.orig
+TestApplication/obj/Debug/TestApplication.csproj.FileListAbsolute.txt
