@@ -9,7 +9,10 @@ namespace TestApplication
     {
         public string AnAdditionalMethod(string x)
         {
-            return x.ToLower();
+            if (!String.IsNullOrEmpty(x))
+                return x.ToLower();
+            else
+                return String.Empty;
         }
     }
 }
