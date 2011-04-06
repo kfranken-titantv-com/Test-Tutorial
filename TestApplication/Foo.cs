@@ -7,5 +7,10 @@ namespace TestApplication
 {
     class Foo
     {
+        public void ANewMethod(string input)
+        {
+            string copy = input.ToLower();
+            copy = null;
+        }
     }
 }
